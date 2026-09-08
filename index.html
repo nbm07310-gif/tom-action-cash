@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <title>TomActionCash — Accueil</title>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   <link rel="stylesheet" href="assets/css/style.css">
   <!-- KaTeX pour le rendu des formules -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.min.css">
@@ -15,8 +16,8 @@
   <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
     <div class="container">
       <a class="navbar-brand d-flex align-items-center" href="#">
-        <img src="assets/img/logo.png" alt="TomActionCash" width="40" height="40" class="me-2">
-        <span class="fw-bold">TomActionCash</span>
+        <img src="assets/img/logo.png" alt="TomActionCash" width="56" height="56" class="me-3 rounded">
+        <span class="fw-bold fs-4">TomActionCash</span>
       </a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarsExample07" aria-controls="#navbarsExample07" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
@@ -26,6 +27,7 @@
         <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
           <li class="nav-item"><a class="nav-link" href="#accueil">Accueil</a></li>
           <li class="nav-item"><a class="nav-link" href="#formules">Formules</a></li>
+          <li class="nav-item"><a class="nav-link" href="#paiement">Paiement</a></li>
           <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
         </ul>
       </div>
@@ -35,13 +37,13 @@
   <header id="accueil" class="py-5 bg-light text-center">
     <div class="container">
       <h1 class="display-5">Bienvenue sur TomActionCash</h1>
-      <p class="lead">Un site clair, moderne et responsive pour afficher toutes tes formules.</p>
+      <p class="lead">Un site clair, moderne et responsive pour afficher toutes tes formules financières.</p>
       <a class="btn btn-primary btn-lg" href="#formules">Voir les formules</a>
     </div>
   </header>
 
   <main class="container my-5">
-    <section class="row align-items-center">
+    <section class="row align-items-center mb-5">
       <div class="col-md-6">
         <h2>À propos</h2>
         <p>TomActionCash présente des formules et calculs clairs. Tu peux ajouter des formules en LaTeX directement dans la section dédiée.</p>
@@ -59,34 +61,75 @@
     <hr>
 
     <section id="formules" class="my-5">
-      <h2 class="mb-3">Exemples de formules</h2>
+      <h2 class="mb-4">3 formules financières importantes</h2>
 
-      <div class="card mb-3">
-        <div class="card-body">
-          <h5 class="card-title">Formule inline</h5>
-          <p class="card-text">Tape une formule inline comme ceci : \(E = mc^2\).</p>
+      <div class="row">
+        <div class="col-md-4">
+          <div class="card mb-3">
+            <div class="card-body">
+              <h5 class="card-title">1) Intérêt simple</h5>
+              <p class="card-text">Montant après durée t :</p>
+              <p class="fs-5 text-center">\(A = P\,(1 + r\,t)\)</p>
+              <p class="small text-muted">P = capital initial, r = taux (annuel), t = temps (années)</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-4">
+          <div class="card mb-3">
+            <div class="card-body">
+              <h5 class="card-title">2) Intérêt composé</h5>
+              <p class="card-text">Montant après n périodes par an :</p>
+              <p class="fs-5 text-center">\(A = P\left(1 + \frac{r}{n}\right)^{n t}\)</p>
+              <p class="small text-muted">P = capital, r = taux annuel, n = nombre de périodes par an, t = années</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-4">
+          <div class="card mb-3">
+            <div class="card-body">
+              <h5 class="card-title">3) Mensualité d'un prêt</h5>
+              <p class="card-text">Paiement mensuel pour un prêt amortissable :</p>
+              <p class="fs-5 text-center">\(M = P\,\frac{r(1+r)^n}{(1+r)^n - 1}\)</p>
+              <p class="small text-muted">P = principal, r = taux périodique, n = nombre de périodes</p>
+            </div>
+          </div>
         </div>
       </div>
 
-      <div class="card mb-3">
-        <div class="card-body">
-          <h5 class="card-title">Formule en bloc</h5>
-          <p class="card-text">Tu peux aussi mettre des équations centrales :</p>
-          <p class="fs-5 text-center">$$\int_{0}^{\infty} e^{-x^2}\,dx = \frac{\sqrt{\pi}}{2}$$</p>
+    </section>
+
+    <section id="paiement" class="my-5">
+      <h2 class="mb-3">Moyens de paiement acceptés</h2>
+      <p>Nous acceptons plusieurs moyens de paiement sécurisés :</p>
+      <div class="d-flex align-items-center gap-3 flex-wrap payment-icons">
+        <div class="text-center">
+          <i class="fa-brands fa-cc-visa fa-2x"></i>
+          <div class="small mt-1">Visa</div>
+        </div>
+        <div class="text-center">
+          <i class="fa-brands fa-cc-mastercard fa-2x"></i>
+          <div class="small mt-1">Mastercard</div>
+        </div>
+        <div class="text-center">
+          <i class="fa-brands fa-cc-paypal fa-2x"></i>
+          <div class="small mt-1">PayPal</div>
+        </div>
+        <div class="text-center">
+          <i class="fa-brands fa-apple-pay fa-2x"></i>
+          <div class="small mt-1">Apple Pay</div>
         </div>
       </div>
 
-      <div class="alert alert-info">
-        Si tu ne vois pas les formules sur ton navigateur, dis‑moi lequel tu utilises (Chrome, Firefox, Edge, Safari) — je vérifierai la configuration KaTeX.
+      <div class="mt-3 alert alert-secondary small">
+        Paiements sécurisés — vos données bancaires ne sont pas conservées sur nos serveurs.
       </div>
-
-      <h3>Ajouter tes propres formules</h3>
-      <p>Édite le fichier <code>index.html</code> et insère des formules en LaTeX avec <code>\( ... \)</code> pour inline et <code>$$ ... $$</code> pour les blocs.</p>
     </section>
 
     <section id="contact" class="my-5">
       <h2>Contact</h2>
-      <p>Pour modifier le site, tu peux éditer les fichiers du dépôt sur GitHub. Si tu veux que je personnalise le design (couleurs, logo, pages supplémentaires), dis‑moi ce que tu veux et je m'en occupe.</p>
+      <p>Pour modifier le site, tu peux éditer les fichiers du dépôt sur GitHub. Si tu veux que je personnalise le design (couleurs, logo haute résolution, pages supplémentaires), envoie le logo haute résolution ou demande les modifications.</p>
     </section>
   </main>
 

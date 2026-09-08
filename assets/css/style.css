@@ -14,3 +14,6 @@ header{
 .navbar-brand img{border-radius:8px}
 .card{border-radius:10px}
 footer{font-size:0.9rem}
+
+.payment-icons i{color:var(--primary)}
+.payment-icons div.small{color:#444}
