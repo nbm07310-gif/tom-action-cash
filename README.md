@@ -1,18 +1,12 @@
 # TomActionCash
 
-Site statique simple pour afficher des formules (LaTeX) avec KaTeX.
+Site en français pour présenter des formules financières et des services de paiement.
 
-Comment éditer les formules :
-- Ouvre `index.html` et insère des formules inline avec `\( ... \)` et des blocs avec `$$ ... $$`.
-- Exemple inline: `\(E = mc^2\)` — exemple bloc:
+Toutes les sections du site sont en français. Si vous souhaitez modifier les textes, les couleurs, ou remplacer le logo par une version haute résolution (PNG transparent recommandé), envoyez le fichier et je le remplacerai.
+
+Pour prévisualiser localement :
 
 ```
-$$
-\int_0^{\infty} e^{-x^2} \, dx = \frac{\sqrt{\pi}}{2}
-$$
+python -m http.server
+# puis ouvrir http://localhost:8000
 ```
-
-Déploiement GitHub Pages :
-- Si tu veux que je l'active, dis‑le moi et je te guide pour l'activer dans les paramètres du dépôt (ou je peux l'activer si tu me donnes l'autorisation explicite pour modifier les paramètres).
-
-Si tu veux des couleurs, un logo personnalisé ou des pages supplémentaires (tarifs, contact, blog), dis‑moi ce que tu veux et je l'ajoute.

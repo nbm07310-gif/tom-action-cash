@@ -1,19 +1,44 @@
-/* Styles de base pour TomActionCash */
+/* Styles améliorés pour TomActionCash */
 :root{
-  --primary:#0d6efd;
-  --bg:#f8f9fa;
+  --primary: #00c853; /* vert vif */
+  --accent: #0b63d6; /* bleu */
+  --dark: #081028;
+  --muted: #6c757d;
+  --card-bg: #ffffff;
 }
+*{box-sizing:border-box}
 body{
-  font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
-  background:var(--bg);
-  color:#222;
+  font-family: 'Poppins', system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;
+  background: linear-gradient(180deg, #07102a 0%, #081028 50%, #07102a 100%);
+  color: #e9f0fb;
+  margin:0;
 }
-header{
-  background: linear-gradient(135deg, rgba(13,110,253,0.05), rgba(13,110,253,0.02));
+.navbar.bg-gradient{
+  background: linear-gradient(90deg, rgba(3,37,65,0.95), rgba(8,16,40,0.95));
+  box-shadow: 0 4px 18px rgba(2,10,30,0.6);
 }
-.navbar-brand img{border-radius:8px}
-.card{border-radius:10px}
-footer{font-size:0.9rem}
-
-.payment-icons i{color:var(--primary)}
-.payment-icons div.small{color:#444}
+.brand-text{font-weight:700; color:var(--primary); font-size:1.25rem}
+.logo{border-radius:10px; background:rgba(255,255,255,0.02); padding:6px}
+.logo-large{max-width:320px}
+.hero{
+  padding:4.5rem 0;
+  background: radial-gradient( circle at 50% 30%, rgba(10,40,80,0.45), rgba(2,8,20,0.6) );
+}
+.btn-cta{background: linear-gradient(90deg,var(--primary), #00e676); border: none; color: #041022}
+.btn-cta:hover{opacity:0.95}
+.container{max-width:1100px}
+.card{background: rgba(255,255,255,0.03); border: none}
+.card .card-title{color:#fff}
+.formula{font-size:1.15rem; text-align:center; padding:0.5rem 0; color:#dfffe7}
+.payment-icons i{color:var(--primary); filter: drop-shadow(0 4px 8px rgba(0,0,0,0.4));}
+.payment-icons .small{color:#cfe9d6}
+.footer{background: linear-gradient(180deg, rgba(2,8,20,1), rgba(2,6,16,1));}
+.text-muted{color:var(--muted) !important}
+.card.h-100{border-radius:12px}
+.shadow-sm{box-shadow: 0 6px 24px rgba(2,8,20,0.6)}
+form .form-control{background: rgba(255,255,255,0.03); border:1px solid rgba(255,255,255,0.04); color:#fff}
+form .form-control::placeholder{color:rgba(255,255,255,0.6)}
+@media (max-width:768px){
+  .brand-text{font-size:1rem}
+  .hero{padding:3rem 0}
+}
