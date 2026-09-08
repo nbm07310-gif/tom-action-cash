@@ -1,365 +1,99 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="fr">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tom Action Cash - Plateforme de Financement Rapide</title>
-    <link rel="stylesheet" href="styles.css">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>TomActionCash — Accueil</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/style.css">
+  <!-- KaTeX pour le rendu des formules -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.min.css">
+  <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.min.js"></script>
+  <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/contrib/auto-render.min.js" onload="renderMathInElement(document.body);"></script>
 </head>
 <body>
-    <!-- Header -->
-    <header>
-        <div class="logo">
-            <div style="width: 60px; height: 60px; background: linear-gradient(135deg, #22c55e 0%, #16a34a 100%); border-radius: 12px; display: flex; align-items: center; justify-content: center; font-size: 2rem; font-weight: bold; color: #fff;">
-                💰
-            </div>
-            <div>
-                <h1>Tom Action Cash</h1>
-                <p class="tagline">Gagnez de l'argent automatiquement</p>
-            </div>
-        </div>
-        <nav>
-            <a href="#services">Formules</a>
-            <a href="#advantages">Avantages</a>
-            <a href="#contact">Contact</a>
-        </nav>
-    </header>
+  <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+    <div class="container">
+      <a class="navbar-brand d-flex align-items-center" href="#">
+        <img src="assets/img/logo.svg" alt="TomActionCash" width="40" height="40" class="me-2">
+        <span class="fw-bold">TomActionCash</span>
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarsExample07" aria-controls="navbarsExample07" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
 
-    <!-- Hero Section -->
-    <section class="hero">
-        <h2>Gagnez de l'Argent Automatiquement</h2>
-        <p>Rejoignez Tom Action Cash et commencez à générer des revenus passifs dès aujourd'hui</p>
-        <button class="btn btn-primary btn-large" onclick="document.getElementById('services').scrollIntoView({behavior: 'smooth'})">
-            Découvrir nos formules
-        </button>
+      <div class="collapse navbar-collapse" id="navbarsExample07">
+        <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+          <li class="nav-item"><a class="nav-link" href="#accueil">Accueil</a></li>
+          <li class="nav-item"><a class="nav-link" href="#formules">Formules</a></li>
+          <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <header id="accueil" class="py-5 bg-light text-center">
+    <div class="container">
+      <h1 class="display-5">Bienvenue sur TomActionCash</h1>
+      <p class="lead">Un site clair, moderne et responsive pour afficher toutes tes formules.</p>
+      <a class="btn btn-primary btn-lg" href="#formules">Voir les formules</a>
+    </div>
+  </header>
+
+  <main class="container my-5">
+    <section class="row align-items-center">
+      <div class="col-md-6">
+        <h2>À propos</h2>
+        <p>TomActionCash présente des formules et calculs clairs. Tu peux ajouter des formules en LaTeX directement dans la section dédiée.</p>
+        <ul>
+          <li>Design responsive (Bootstrap)</li>
+          <li>Rendu des formules avec KaTeX</li>
+          <li>Facile à éditer dans index.html</li>
+        </ul>
+      </div>
+      <div class="col-md-6 text-center">
+        <img src="https://via.placeholder.com/420x260.png?text=TomActionCash" alt="TomActionCash" class="img-fluid rounded shadow-sm">
+      </div>
     </section>
 
-    <!-- Services Section -->
-    <section class="services" id="services">
-        <h2>Nos Formules</h2>
-        <p class="section-subtitle">Choisissez la formule qui correspond à vos besoins</p>
-        
-        <div class="cards">
-            <!-- Formule Classique -->
-            <div class="card">
-                <div class="card-header">
-                    <h3>Formule Classique</h3>
-                    <div class="price">19,99€</div>
-                    <div class="period">/mois</div>
-                </div>
-                <div class="card-body">
-                    <div class="plan-details">
-                        <h4>Inclus :</h4>
-                        <ul class="features">
-                            <li>✅ <strong>Actions automatiques</strong> toutes les 2h45</li>
-                            <li>✅ <strong>4,50€</strong> par action</li>
-                            <li>✅ Rendement mensuel: ~66,60€</li>
-                            <li>✅ Accès <strong>24/7</strong></li>
-                            <li>✅ Support par <strong>email</strong></li>
-                            <li>✅ Retraits <strong>illimités</strong></li>
-                            <li>✅ Compte gratuit <strong>à vie</strong></li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="card-footer">
-                    <button class="btn btn-primary btn-large" onclick="selectPlan('classique', 19.99, 4.50)">
-                        Choisir cette formule
-                    </button>
-                </div>
-            </div>
+    <hr>
 
-            <!-- Formule Premium -->
-            <div class="card card-featured">
-                <div class="badge">⭐ Populaire</div>
-                <div class="card-header">
-                    <h3>Formule Premium</h3>
-                    <div class="price">27,99€</div>
-                    <div class="period">/mois</div>
-                </div>
-                <div class="card-body">
-                    <div class="plan-details">
-                        <h4>Inclus :</h4>
-                        <ul class="features">
-                            <li>✅ <strong>Actions automatiques</strong> toutes les 2h45</li>
-                            <li>✅ <strong>6,30€</strong> par action</li>
-                            <li>✅ Rendement mensuel: ~93,10€</li>
-                            <li>✅ Accès <strong>prioritaire</strong></li>
-                            <li>✅ Support <strong>24/7 par chat</strong></li>
-                            <li>✅ Gestionnaire de compte <strong>personnel</strong></li>
-                            <li>✅ Rapport détaillé <strong>mensuel</strong></li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="card-footer">
-                    <button class="btn btn-primary btn-large" onclick="selectPlan('premium', 27.99, 6.30)">
-                        Choisir cette formule
-                    </button>
-                </div>
-            </div>
+    <section id="formules" class="my-5">
+      <h2 class="mb-3">Exemples de formules</h2>
 
-            <!-- Formule Or -->
-            <div class="card">
-                <div class="badge" style="background: linear-gradient(135deg, #f59e0b 0%, #d97706 100%);">👑 Elite</div>
-                <div class="card-header">
-                    <h3>Formule Or</h3>
-                    <div class="price">48,99€</div>
-                    <div class="period">/mois</div>
-                </div>
-                <div class="card-body">
-                    <div class="plan-details">
-                        <h4>Inclus :</h4>
-                        <ul class="features">
-                            <li>✅ <strong>Actions automatiques</strong> toutes les 2h45</li>
-                            <li>✅ <strong>13,50€</strong> par action</li>
-                            <li>✅ Rendement mensuel: ~199,80€</li>
-                            <li>✅ Accès <strong>VIP illimité</strong></li>
-                            <li>✅ Support <strong>prioritaire 24/7</strong></li>
-                            <li>✅ Gestionnaire <strong>VIP personnel</strong></li>
-                            <li>✅ Rapport <strong>hebdomadaire détaillé</strong></li>
-                            <li>✅ Bonus <strong>actions supplémentaires</strong></li>
-                            <li>✅ Retraits <strong>sans frais</strong></li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="card-footer">
-                    <button class="btn btn-primary btn-large" onclick="selectPlan('or', 48.99, 13.50)">
-                        Choisir cette formule
-                    </button>
-                </div>
-            </div>
+      <div class="card mb-3">
+        <div class="card-body">
+          <h5 class="card-title">Formule inline</h5>
+          <p class="card-text">Tape une formule inline comme ceci : \(E = mc^2\).</p>
         </div>
+      </div>
+
+      <div class="card mb-3">
+        <div class="card-body">
+          <h5 class="card-title">Formule en bloc</h5>
+          <p class="card-text">Tu peux aussi mettre des équations centrales :</p>
+          <p class="fs-5 text-center">$$\int_{0}^{\infty} e^{-x^2}\,dx = \frac{\sqrt{\pi}}{2}$$</p>
+        </div>
+      </div>
+
+      <div class="alert alert-info">
+        Si tu ne vois pas les formules sur ton navigateur, dis‑moi lequel tu utilises (Chrome, Firefox, Edge, Safari) — je vérifierai la configuration KaTeX.
+      </div>
+
+      <h3>Ajouter tes propres formules</h3>
+      <p>Édite le fichier <code>index.html</code> et insère des formules en LaTeX avec <code>\( ... \)</code> pour inline et <code>$$ ... $$</code> pour les blocs.</p>
     </section>
 
-    <!-- Avantages Section -->
-    <section class="advantages" id="advantages">
-        <h2>Pourquoi Choisir Tom Action Cash ?</h2>
-        
-        <div class="advantages-grid">
-            <div class="advantage-item">
-                <div class="icon">🔒</div>
-                <h4>100% Sécurisé</h4>
-                <p>Paiement par carte bancaire chiffré avec vérification SSL/TLS standard</p>
-            </div>
-            
-            <div class="advantage-item">
-                <div class="icon">⚡</div>
-                <h4>Automatique</h4>
-                <p>Les actions s'exécutent automatiquement toutes les 2h45 sans intervention</p>
-            </div>
-            
-            <div class="advantage-item">
-                <div class="icon">💰</div>
-                <h4>Rendements Réguliers</h4>
-                <p>Gagnez de l'argent chaque mois avec nos formules flexibles</p>
-            </div>
-            
-            <div class="advantage-item">
-                <div class="icon">📊</div>
-                <h4>Suivi en Temps Réel</h4>
-                <p>Consultez vos gains et statistiques en direct sur votre compte</p>
-            </div>
-            
-            <div class="advantage-item">
-                <div class="icon">🎯</div>
-                <h4>Support Dédié</h4>
-                <p>Équipe disponible 24/7 pour répondre à vos questions</p>
-            </div>
-            
-            <div class="advantage-item">
-                <div class="icon">✅</div>
-                <h4>Retraits Gratuits</h4>
-                <p>Aucun frais cachés - Retirez vos gains quand vous le souhaitez</p>
-            </div>
-        </div>
+    <section id="contact" class="my-5">
+      <h2>Contact</h2>
+      <p>Pour modifier le site, tu peux éditer les fichiers du dépôt sur GitHub. Si tu veux que je personnalise le design (couleurs, logo, pages supplémentaires), dis‑moi ce que tu veux et je m'en occupe.</p>
     </section>
+  </main>
 
-    <!-- Payment Section -->
-    <section class="payment-section" id="payment">
-        <div class="payment-container">
-            <h2>💳 Finaliser votre Paiement</h2>
-            <p class="security-notice">🔒 Paiement 100% sécurisé</p>
+  <footer class="py-4 bg-dark text-white text-center">
+    <div class="container">© TomActionCash — créé pour @tomactioncash</div>
+  </footer>
 
-            <!-- Plan Info -->
-            <div class="plan-info">
-                <div class="info-item">
-                    <strong>Plan sélectionné:</strong>
-                    <span id="selectedPlanName">-</span>
-                </div>
-                <div class="info-item">
-                    <strong>Montant mensuel:</strong>
-                    <span id="selectedAmount">-</span>€
-                </div>
-                <div class="info-item">
-                    <strong>Par action:</strong>
-                    <span id="selectedAction">-</span>€
-                </div>
-            </div>
-
-            <!-- Payment Form -->
-            <form id="paymentForm" class="payment-form">
-                <!-- Section Informations Personnelles -->
-                <h3>📋 Informations Personnelles</h3>
-                
-                <div class="form-group">
-                    <label for="name">Nom complet *</label>
-                    <input type="text" id="name" name="name" required placeholder="Jean Dupont">
-                </div>
-
-                <div class="form-group">
-                    <label for="email">Email *</label>
-                    <input type="email" id="email" name="email" required placeholder="jean@example.com">
-                </div>
-
-                <div class="form-group">
-                    <label for="phone">Téléphone *</label>
-                    <input type="tel" id="phone" name="phone" required placeholder="+33 6 12 34 56 78">
-                </div>
-
-                <!-- Section Adresse -->
-                <h3>🏠 Adresse de Facturation</h3>
-                
-                <div class="form-group">
-                    <label for="address">Adresse *</label>
-                    <input type="text" id="address" name="address" required placeholder="123 Rue de la Paix">
-                </div>
-
-                <div class="form-row">
-                    <div class="form-group">
-                        <label for="city">Ville *</label>
-                        <input type="text" id="city" name="city" required placeholder="Paris">
-                    </div>
-                    <div class="form-group">
-                        <label for="postal">Code Postal *</label>
-                        <input type="text" id="postal" name="postal" required placeholder="75000">
-                    </div>
-                </div>
-
-                <div class="form-group">
-                    <label for="country">Pays *</label>
-                    <input type="text" id="country" name="country" required placeholder="France" value="France">
-                </div>
-
-                <!-- Section Compte -->
-                <h3>👤 Identifiant de Compte</h3>
-                
-                <div class="form-group">
-                    <label for="username">Nom d'utilisateur *</label>
-                    <input type="text" id="username" name="username" required placeholder="Mon_compte" minlength="3">
-                </div>
-
-                <!-- Section Carte Bancaire -->
-                <h3>💳 Informations Bancaires</h3>
-                
-                <div class="info-text">
-                    ℹ️ Vos données bancaires sont chiffrées et 100% sécurisées
-                </div>
-
-                <div class="form-group">
-                    <label for="cardName">Titulaire de la carte *</label>
-                    <input type="text" id="cardName" name="cardName" required placeholder="JEAN DUPONT">
-                </div>
-
-                <div class="form-group">
-                    <label for="cardNumber">Numéro de carte (16 chiffres) *</label>
-                    <input type="text" id="cardNumber" name="cardNumber" required placeholder="1234 5678 9012 3456" maxlength="19">
-                </div>
-
-                <div class="form-row">
-                    <div class="form-group">
-                        <label for="expiry">Date d'expiration (MM/YY) *</label>
-                        <input type="text" id="expiry" name="expiry" required placeholder="12/25" maxlength="5">
-                    </div>
-                    <div class="form-group">
-                        <label for="cvv">CVV *</label>
-                        <input type="text" id="cvv" name="cvv" required placeholder="123" maxlength="4">
-                    </div>
-                </div>
-
-                <!-- Conditions -->
-                <div class="checkbox">
-                    <input type="checkbox" id="terms" name="terms" required>
-                    <label for="terms">J'accepte les conditions d'utilisation et la politique de confidentialité</label>
-                </div>
-
-                <!-- Boutons -->
-                <div class="button-group">
-                    <button type="submit" class="btn btn-primary btn-large">
-                        ✅ Payer Maintenant
-                    </button>
-                    <button type="button" class="btn btn-outline btn-large" onclick="cancelPayment()">
-                        ❌ Annuler
-                    </button>
-                </div>
-
-                <p style="text-align: center; color: #64748b; margin-top: 1rem; font-size: 0.9rem;">
-                    Vos identifiants seront envoyés par email après le paiement
-                </p>
-            </form>
-        </div>
-    </section>
-
-    <!-- Contact Section -->
-    <section class="contact" id="contact">
-        <h2>📞 Besoin d'Aide ?</h2>
-        <p>Notre équipe est disponible 24/7 pour vous assister</p>
-        
-        <div class="contact-info">
-            <div class="contact-item">
-                <h4>📧 Email</h4>
-                <p>contact@tomactioncash.fr</p>
-            </div>
-            
-            <div class="contact-item">
-                <h4>📱 Téléphone</h4>
-                <p>+33 1 23 45 67 89</p>
-            </div>
-            
-            <div class="contact-item">
-                <h4>🏦 Virement Bancaire</h4>
-                <p>IE85SUMU99036513294692</p>
-            </div>
-        </div>
-    </section>
-
-    <!-- Footer -->
-    <footer>
-        <div class="footer-content">
-            <div class="footer-section">
-                <h4>À Propos</h4>
-                <ul>
-                    <li><a href="#services">Nos Formules</a></li>
-                    <li><a href="#advantages">Avantages</a></li>
-                    <li><a href="#contact">Contact</a></li>
-                </ul>
-            </div>
-            
-            <div class="footer-section">
-                <h4>Support</h4>
-                <ul>
-                    <li><a href="mailto:contact@tomactioncash.fr">Email Support</a></li>
-                    <li><a href="#">FAQ</a></li>
-                    <li><a href="#">Conditions d'Utilisation</a></li>
-                </ul>
-            </div>
-            
-            <div class="footer-section">
-                <h4>Informations</h4>
-                <ul>
-                    <li>Politique de Confidentialité</li>
-                    <li>Conditions Générales</li>
-                    <li>Mentions Légales</li>
-                </ul>
-            </div>
-        </div>
-        
-        <div class="footer-bottom">
-            <p>© 2024 Tom Action Cash - Tous droits réservés</p>
-            <p>🔒 Plateforme 100% Sécurisée - Paiement Chiffré SSL/TLS</p>
-            <p>IBAN: IE85SUMU99036513294692</p>
-        </div>
-    </footer>
-
-    <!-- JavaScript -->
-    <script src="script.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>

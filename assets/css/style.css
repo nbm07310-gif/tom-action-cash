@@ -1,0 +1,16 @@
+/* Styles de base pour TomActionCash */
+:root{
+  --primary:#0d6efd;
+  --bg:#f8f9fa;
+}
+body{
+  font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+  background:var(--bg);
+  color:#222;
+}
+header{
+  background: linear-gradient(135deg, rgba(13,110,253,0.05), rgba(13,110,253,0.02));
+}
+.navbar-brand img{border-radius:8px}
+.card{border-radius:10px}
+footer{font-size:0.9rem}
