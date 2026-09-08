@@ -9,11 +9,12 @@
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="styles.css">
 
   <!-- KaTeX pour le rendu des formules -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.min.css">
   <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.min.js"></script>
-  <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/contrib/auto-render.min.js" onload="renderMathInElement(document.body, {delimiters: [{left: '$$', right: '$$', display: true},{left: '\\(', right: '\\)', display: false}]});"></script>
+  <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/contrib/auto-render.min.js" onload="renderMathInElement(document.body, {delimiters: [{left: '$$', right: '$$', display: true},{left: '$', right: '$', display: false}]});"></script>
 </head>
 <body>
   <nav class="navbar navbar-expand-lg navbar-dark bg-gradient">
@@ -54,7 +55,7 @@
         <ul class="list-unstyled text-muted">
           <li>• Design moderne et responsive</li>
           <li>• Rendu des formules avec KaTeX (LaTeX)</li>
-          <li>• Paiements sécurisés</li>
+          <li>• Paiements sécurisés par carte</li>
         </ul>
       </div>
       <div class="col-lg-6 text-center">
@@ -63,50 +64,57 @@
     </section>
 
     <section id="formules" class="my-5">
-      <h2 class="mb-4">3 formules financières importantes</h2>
+      <h2 class="mb-4">Nos 3 formules</h2>
       <div class="row g-4">
+
         <div class="col-md-4">
-          <div class="card h-100 shadow-sm">
-            <div class="card-body">
-              <h5 class="card-title">1) Intérêt simple</h5>
-              <p class="card-text">Montant A après une durée t :</p>
-              <div class="formula">\(A = P\,(1 + r\,t)\)</div>
-              <p class="small text-muted mt-2">P = capital initial, r = taux annuel (ex : 0.05), t = durée en années</p>
+          <article class="card tac-plan h-100 shadow-sm text-center">
+            <div class="card-body d-flex flex-column">
+              <h3 class="card-title">Formule Essentielle</h3>
+              <div class="tac-price">17,99 €</div>
+              <p class="tac-desc">Service financier express — traitement sous 24–48h. Idéal pour montants simples.</p>
+              <div class="mt-auto">
+                <a href="#" class="tac-cta" data-payment-link="PAYMENT_LINK_ESSENTIEL">Commander</a>
+              </div>
             </div>
-          </div>
+          </article>
         </div>
 
         <div class="col-md-4">
-          <div class="card h-100 shadow-sm">
-            <div class="card-body">
-              <h5 class="card-title">2) Intérêt composé</h5>
-              <p class="card-text">Montant A après n périodes par an :</p>
-              <div class="formula">\(A = P\left(1 + \frac{r}{n}\right)^{n t}\)</div>
-              <p class="small text-muted mt-2">P = capital, r = taux annuel, n = périodes par an, t = années</p>
+          <article class="card tac-plan h-100 shadow-sm text-center">
+            <div class="card-body d-flex flex-column">
+              <h3 class="card-title">Formule Avantage</h3>
+              <div class="tac-price">27,99 €</div>
+              <p class="tac-desc">Traitement prioritaire + assistance prioritaire. Meilleur rapport qualité/prix.</p>
+              <div class="mt-auto">
+                <a href="#" class="tac-cta" data-payment-link="PAYMENT_LINK_AVANTAGE">Commander</a>
+              </div>
             </div>
-          </div>
+          </article>
         </div>
 
         <div class="col-md-4">
-          <div class="card h-100 shadow-sm">
-            <div class="card-body">
-              <h5 class="card-title">3) Mensualité d'un prêt</h5>
-              <p class="card-text">Paiement périodique pour rembourser un prêt :</p>
-              <div class="formula">\(M = P\,\frac{r(1+r)^n}{(1+r)^n - 1}\)</div>
-              <p class="small text-muted mt-2">P = principal, r = taux périodique, n = nombre de périodes</p>
+          <article class="card tac-plan h-100 shadow-sm text-center">
+            <div class="card-body d-flex flex-column">
+              <h3 class="card-title">Formule Premium</h3>
+              <div class="tac-price">48,99 €</div>
+              <p class="tac-desc">Suivi personnalisé, priorité max et assistance dédiée. Pour besoins avancés.</p>
+              <div class="mt-auto">
+                <a href="#" class="tac-cta" data-payment-link="PAYMENT_LINK_PREMIUM">Commander</a>
+              </div>
             </div>
-          </div>
+          </article>
         </div>
+
       </div>
-
       <div class="mt-4 text-center">
-        <p class="text-muted">Conseil : remplacez P, r, n par vos valeurs pour calculer rapidement.</p>
+        <p class="text-muted">Conseil : utilisez les boutons "Commander" pour régler par carte de manière sécurisée.</p>
       </div>
     </section>
 
     <section id="paiement" class="my-5">
-      <h2 class="mb-3">Moyens de paiement acceptés</h2>
-      <p>Nous acceptons plusieurs moyens de paiement sécurisés :</p>
+      <h2 class="mb-3">Paiement par carte — rapide et sécurisé</h2>
+      <p>Nous acceptons les paiements par carte bancaire via Stripe. Les paiements sont traités par Stripe et vos données bancaires ne sont pas stockées par TomActionCash.</p>
       <div class="d-flex align-items-center gap-4 flex-wrap payment-icons">
         <div class="text-center">
           <i class="fa-brands fa-cc-visa fa-3x"></i>
@@ -117,20 +125,16 @@
           <div class="small mt-2">Mastercard</div>
         </div>
         <div class="text-center">
-          <i class="fa-brands fa-cc-paypal fa-3x"></i>
-          <div class="small mt-2">PayPal</div>
-        </div>
-        <div class="text-center">
-          <i class="fa-brands fa-apple-pay fa-3x"></i>
-          <div class="small mt-2">Apple Pay</div>
+          <i class="fa-brands fa-cc-amex fa-3x"></i>
+          <div class="small mt-2">Amex</div>
         </div>
       </div>
-      <div class="mt-3 alert alert-secondary small">Paiements sécurisés — vos données bancaires ne sont pas conservées sur nos serveurs.</div>
+      <div class="mt-3 alert alert-secondary small">Pour activer les boutons "Commander" : créez d’abord vos Stripe Payment Links (mode Test), puis remplacez les placeholders PAYMENT_LINK_* dans le code par les URLs fournies par Stripe. Si vous préférez, envoyez‑moi les URLs et je les intègre pour vous.</div>
     </section>
 
     <section id="contact" class="my-5">
       <h2>Contact</h2>
-      <p>Pour personnaliser ce site (couleurs, logo haute résolution, pages supplémentaires), contacte-nous :</p>
+      <p>Pour personnaliser ce site (couleurs, logo haute résolution, pages supplémentaires), contactez‑nous :</p>
       <form class="row g-3">
         <div class="col-md-6">
           <input type="text" class="form-control" placeholder="Votre nom">
@@ -153,5 +157,22 @@
   </footer>
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="script.js"></script>
+  <script>
+    // Gestion simple des boutons de paiement : remplacez PAYMENT_LINK_* par vos URLs Stripe.
+    document.addEventListener('DOMContentLoaded', function(){
+      document.querySelectorAll('.tac-cta').forEach(function(btn){
+        btn.addEventListener('click', function(e){
+          e.preventDefault();
+          var link = btn.getAttribute('data-payment-link') || btn.href;
+          if(!link || link.startsWith('PAYMENT_LINK_')){
+            alert('Bouton non configuré: remplacez le placeholder PAYMENT_LINK_* par l\'URL Stripe Payment Link pour cette formule, ou envoyez‑la moi et je l\'intégrerai.');
+            return;
+          }
+          window.open(link, '_blank');
+        });
+      });
+    });
+  </script>
 </body>
 </html>
